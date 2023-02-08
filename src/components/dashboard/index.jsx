@@ -13,6 +13,10 @@ const content = (<Descriptions size="small" column={2}>
     <Descriptions.Item label="Remark">Gucui Road, West Lake District, Hangzhou City, Zhejiang Province, China</Descriptions.Item>
   </Descriptions>);
 const Dashboard = () => {
+    const logout = () => {
+      localStorage.clear();
+      window.loaction.reload();
+    }
     const [settings, setSetting] = useState({ fixSiderbar: true });
     const [pathname, setPathname] = useState('/welcome');
     return (<div id="test-pro-layout" style={{
@@ -58,7 +62,7 @@ const Dashboard = () => {
               <Statistic title="Feedback" value={1128} prefix={<LikeOutlined />}/>
               <Statistic title="Unmerged" value={93} suffix="/ 100"/>
             </Space>} extra={[
-            <Button key="3">Operate</Button>,
+            <Button key="3" onClick={logout}>Logout</Button>,
             <Button key="2">Operate</Button>,
             <Button key="1" type="primary">
               Main operation
