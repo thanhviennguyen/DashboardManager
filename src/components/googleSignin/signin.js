@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from "react";
+import { useRef } from "react";
 import {Form, Buttion, Card} from "react-bootstrap";
 import {signInWithPopup} from "firebase/auth";
 import { auth, provider } from "./config";
 import Dashboard from "../dashboard";
 
 function Signin(){
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const cofirmPasswordRef = useRef();
+    
     const [value, setValue] = useState('')
     const handleClick = () => {
         signInWithPopup(auth, provider).then((data) => {
@@ -20,9 +25,25 @@ function Signin(){
     return (
         <>
         <Card>
-
+            <Card.Body>
+                <h2 className="text-center mb-4">Sign Up</h2>
+                <Form>
+                <Form.Group id="email">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" ref={emailRef} required/>
+                </Form.Group>
+                <Form.Group id="password">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" ref={passwordRef} required/>
+                </Form.Group>
+                <Form.Group id="email">
+                    <Form.Label>confimPassword</Form.Label>
+                    <Form.Control type="email" ref={cofirmPasswordRef} required/>
+                </Form.Group>
+                </Form>
+            </Card.Body>
         </Card>
-        <div>
+        <div className="w-100 text-center mt-2">
             Do you have a acount?
         </div>
         <div>

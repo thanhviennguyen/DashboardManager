@@ -61,8 +61,9 @@ const Dashboard = () => {
         ]} extraContent={<Space size={24}>
               <Statistic title="Feedback" value={1128} prefix={<LikeOutlined />}/>
               <Statistic title="Unmerged" value={93} suffix="/ 100"/>
+              <Button key="3" onClick={logout}>Logout</Button>
             </Space>} extra={[
-            <Button key="3" onClick={logout}>Logout</Button>,
+            
             <Button key="2">Operate</Button>,
             <Button key="1" type="primary">
               Main operation
