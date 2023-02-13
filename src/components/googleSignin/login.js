@@ -24,54 +24,32 @@ function Login(){
     })
     
     return (
-        // <>
-        // <Card>
-        //     <Card.Body>
-        //         <h2 className="text-center mb-4">Login</h2>
-        //         <Form>
-        //         <Form.Group id="email">
-        //             <Form.Label>Email</Form.Label>
-        //             <Form.Control type="email" ref={emailRef} required/>
-        //         </Form.Group>
-        //         <Form.Group id="password">
-        //             <Form.Label>Password</Form.Label>
-        //             <Form.Control type="password" ref={passwordRef} required/>
-        //         </Form.Group>
-        //         </Form>
-        //     </Card.Body>
-        // </Card>
-        // <div className="w-100 text-center mt-2">
-        //     Do you have a acount?
-        // </div>
-        // <div>
-        //     {value?<Dashboard/>:
-        //     <button onClick={handleClick}>Signin With Google</button>
-        //     }
-        // </div>
-        // </>
-        <div className="login">
-        <form onSubmit={handleClick}>
-          <input
-            type="email"
-            placeholder="email"
-            // onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="password"
-            // onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Login</button>
-          {<span>Wrong email or password!</span>}
-          <>
-          <div>
-             {value?<Dashboard/>:
-             <button onClick={handleClick}>Signin With Google</button>
-             }
-         </div>
-         </>s
-        </form>
-      </div>
+        <>
+        <Card>
+            <Card.Body>
+                <h2 className="text-center mb-4">Login</h2>
+                <Form>
+                <Form.Group id="email">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" ref={emailRef} required/>
+                </Form.Group>
+                <Form.Group id="password">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" ref={passwordRef} required/>
+                </Form.Group>
+                </Form>
+            </Card.Body>
+        </Card>
+        <div className="w-100 text-center mt-2">
+            Do you have a acount?
+        </div>
+        <div>
+            {value?<Dashboard/>:
+            <button onClick={handleClick}>Signin With Google</button>
+            }
+        </div>
+        </>
+
     );
 }
 
