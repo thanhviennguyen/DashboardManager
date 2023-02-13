@@ -1,6 +1,6 @@
 import './App.css';
 import Dashboard from './components/dashboard/index'
-import Signin from './components/googleSignin/signin';
+import Login from './components/googleSignin/login';
 import { Container } from 'react-bootstrap';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     // <Container className="d-flex align-item-center justify-content-center"
     // style={{minHeight: "100vh" }}>
     //   <div className='w-100' style={{maxWidth: "400px"}}>
-        <Signin />
+        <Login />
     //     </div>
     // </Container>
     // <Dashboard/>
